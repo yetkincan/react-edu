@@ -1,3 +1,5 @@
+import { b } from 'bowser';
+
 const MyTitle = function(props) {
   return React.createElement('div', null, React.createElement('h1', { style: { color: props.color } }, props.title));
 };
@@ -21,9 +23,23 @@ const MyFirstComponent = function() {
   ]);
 };
 
+var a = 4;
+a = a + x;
+
 ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('app'));
 
 //yarn global add prettier
 //prettier --single-quote --print-width=120 ClientApp.jsx
 //prettier --single-quote --print-width=120 --write ClientApp.jsx
 // "format":"prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\""
+
+//yarn add eslint
+// yarn add eslint-plugin-prettier
+// yarn add eslint-config-prettier
+// yarn add eslint-config-prettier
+// yarn add eslint-config-airbnb
+// yarn add eslint-plugin-jsx-a11y
+// yarn add eslint-plugin-react
+// yarn add eslint-plugin-import
+// vscode'u application folderına koyup orada açmak lazım
+//eslint **/*.{js,jsx} --quiet
