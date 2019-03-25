@@ -1,11 +1,21 @@
-import { b } from 'bowser';
+import React from 'react'
+import { render } from 'react-dom'
+
+/*
+// MyModule
+export const x = 5
+export const y = 10
+// different file
+import { x } fron './MyModule'
+// tree shaking
+*/
 
 const MyTitle = function(props) {
   return React.createElement('div', null, React.createElement('h1', { style: { color: props.color } }, props.title));
 };
 const MyFirstComponent = function() {
   //return React.createElement('div', null, React.createElement('h1', null, 'This is my first component!'))
-  return React.createElement('div', null, [
+  return React.createElement('div', null, 
     React.createElement(MyTitle, {
       title: 'Game of Thrones',
       color: 'YellowGreen'
@@ -20,13 +30,13 @@ const MyFirstComponent = function() {
     }),
 
     React.createElement(MyTitle, { title: 'Silicon Valley', color: 'peru' })
-  ]);
+  );
 };
-
+/*
 var a = 4;
 a = a + x;
-
-ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('app'));
+*/
+render(React.createElement(MyFirstComponent), document.getElementById('app'));
 
 //yarn global add prettier
 //prettier --single-quote --print-width=120 ClientApp.jsx
@@ -43,3 +53,5 @@ ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('
 // yarn add eslint-plugin-import
 // vscode'u application folderına koyup orada açmak lazım
 //eslint **/*.{js,jsx} --quiet
+
+//./node_modules/.bin/webpack js/ClientApp.js public/bundle.js
