@@ -11,34 +11,28 @@ import { x } fron './MyModule'
 */
 
 const MyTitle = function(props) {
-  return React.createElement('div', null, React.createElement('h1', { style: { color: props.color } }, props.title));
+  // return React.createElement('div', null, React.createElement('h1', { style: { color: props.color } }, props.title));
+  const style = {color: props.color}
+  return (
+    <div>
+      <h1 style={style}>{props.title}</h1>
+    </div>
+  )
 };
 const MyFirstComponent = function() {
   //return React.createElement('div', null, React.createElement('h1', null, 'This is my first component!'))
-  return React.createElement(
-    'div',
-    null,
-    React.createElement(MyTitle, {
-      title: 'Game of Thrones',
-      color: 'YellowGreen'
-    }),
-    React.createElement(MyTitle, {
-      title: 'Stranger Things',
-      color: 'GreenYellow'
-    }),
-    React.createElement(MyTitle, {
-      title: 'Rick and Morty',
-      color: 'LimeGreen'
-    }),
-    React.createElement(MyTitle, { title: 'Silicon Valley', color: 'peru' }),
-    React.createElement(MyTitle, { title: 'House of Cards', color: 'peru' })
-  );
+  return <div id="my-first-component">
+            <MyTitle title="Game of Thrones" color="YellowGreen" />
+            <MyTitle title="Stranger Things" color="GreenYellow" />
+            <MyTitle title="House of Cards" color="Peru" />
+            <MyTitle title="The Americans" color="burlywood" />
+          </div>
 };
 /*
 var a = 4;
 a = a + x;
 */
-render(React.createElement(MyFirstComponent), document.getElementById('app'));
+render(<MyFirstComponent/>, document.getElementById('app'));
 /*
 //yarn global add prettier
 //prettier --single-quote --print-width=120 ClientApp.jsx

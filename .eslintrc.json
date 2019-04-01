@@ -18,5 +18,12 @@
         "es6":true,
         "browser": true,
         "node": true
+    },
+    "rules": {
+        "react/destructuring-assignment": [true, { "extensions": [".jsx"] }],
+        "react/prop-types": 0,
+        "react/jsx-filename-extension": 0,
+        "spaced-comment": 0,
+        "func-names": 0
     }
 }
