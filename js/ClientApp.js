@@ -13,3 +13,7 @@ if (module.hot) {
     renderApp();
   });
 }
+
+// yarn flow -- init
+//yarn add flow-typed
+//flow-typed install
