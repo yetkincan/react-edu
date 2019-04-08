@@ -1,10 +1,12 @@
 {
     "extends": [
+        "plugin:flowtype/recommended",
         "airbnb",
         "prettier",
         "prettier/react"
     ],
     "plugins": [
+        "flowtype",
         "prettier"
     ],
     "parserOptions": {
@@ -22,7 +24,7 @@
         "jest": true
     },
     "rules": {
-        "react/destructuring-assignment": [true, { "extensions": [".jsx"] }],
+        "react/destructuring-assignment": [0, { "extensions": [".js"] }],
         "react/prop-types": 0,
         "react/jsx-filename-extension": 0,
         "spaced-comment": 0,
