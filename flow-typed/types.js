@@ -5,7 +5,7 @@ declare var module: {
     accept(path: string, callback: () => void): void
   }
 };
-
+/*
 export type Show = {
   title: string,
   description: string,
@@ -31,3 +31,4 @@ declare type ActionT<A: ActionType, P> = {|
 |};
 
 export type Action = ActionT<'SET_SEARCH_TERM', string> | ActionT<'ADD_API_DATA', Show>;
+*/

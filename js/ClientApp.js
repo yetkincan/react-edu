@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import { render } from 'react-dom';
 import App from './App';
@@ -13,7 +15,3 @@ if (module.hot) {
     renderApp();
   });
 }
-
-// yarn flow -- init
-//yarn add flow-typed
-//flow-typed install
