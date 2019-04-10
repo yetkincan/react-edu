@@ -5,7 +5,7 @@ declare var module: {
     accept(path: string, callback: () => void): void
   }
 };
-/*
+
 export type Show = {
   title: string,
   description: string,
@@ -15,6 +15,8 @@ export type Show = {
   trailer: string,
   rating?: string
 };
+/*
+
 
 export type State = {
   searchTerm: string,
