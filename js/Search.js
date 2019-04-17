@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import ShowCard from './ShowCard';
-import Header from './Header'
+import Header from './Header';
 
 class Search extends Component {
   state = {
@@ -33,3 +33,9 @@ class Search extends Component {
 }
 
 export default Search;
+
+// componentWillMount => Before rendering, dont use much, mostly used in SSR
+// componentDidMount => used for integrating another api
+// componentWillReceiveProps => if you get new props from the parent
+// shouldComponentUpdate => performance optimization method
+// componentWillUnmount => component is about to leave the dom
